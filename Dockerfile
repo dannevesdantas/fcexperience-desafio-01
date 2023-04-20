@@ -6,4 +6,4 @@ RUN go build -ldflags '-w -s -extldflags "-static"' -a -o app hello.go
 FROM scratch
 WORKDIR /app
 COPY --from=0 /app ./
-CMD ["app"]
+CMD ["./app"]
